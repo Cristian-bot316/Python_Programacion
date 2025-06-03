@@ -20,9 +20,9 @@
 
 #definir variables
 temp = float(input("ingrese su temperatura: "))
-escala_inicial = input("indique escala inicial: C, F, K ").upper()
-escala_final = input("indique escala final: C, F, K ").upper()
-#crear funcion convertir de celcius a k
+escala_inicial = input("indique escala inicial: C, F, K ").upper().strip()
+escala_final = input("indique escala final: C, F, K ").upper().strip()
+#crear funcion convertir temperatura
 def convertidor_C(temp, inicio, final):
     resultado = 0
     if inicio == "K":
@@ -49,10 +49,6 @@ def convertidor_C(temp, inicio, final):
     else:
        print("escala final erronea")
        
-    print(resultado)
+    print(f"{temp}°{inicio} = {resultado}°{final}")
 
 convertidor_C(temp,escala_inicial,escala_final)
-
-
-
-
